@@ -8,8 +8,8 @@ const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
 
   const navigation = [
-    { name: 'About', href: '/about' },
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Dashboard', href: '/dashboard' },
     { name: 'Event Map', href: '/event-map' },
     { name: 'Analytics', href: '/analytics' },
@@ -74,7 +74,6 @@ const Navbar: React.FC = () => {
               <div className="flex items-center space-x-4">
                 <div className="text-right">
                   <div className="text-white font-medium">{user.name}</div>
-                  <div className="text-gray-400 text-sm">{user.organization}</div>
                 </div>
                 <button
                   onClick={handleLogout}
@@ -146,7 +145,6 @@ const Navbar: React.FC = () => {
                 <div className="space-y-3">
                   <div className="px-3 py-2 text-center">
                     <div className="text-white font-medium">{user.name}</div>
-                    <div className="text-gray-400 text-sm">{user.organization}</div>
                   </div>
                   <button
                     onClick={() => {
